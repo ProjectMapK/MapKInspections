@@ -24,4 +24,9 @@ data class TwentyArgs(
     var arg17: Int,
     var arg18: Int,
     var arg19: Int
-)
+) {
+    constructor(arg: Int) : this(
+        arg, arg, arg, arg, arg, arg, arg, arg, arg, arg,
+        arg, arg, arg, arg, arg, arg, arg, arg, arg, arg
+    )
+}

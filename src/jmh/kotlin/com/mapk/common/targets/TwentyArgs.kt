@@ -25,8 +25,10 @@ data class TwentyArgs(
     var arg18: Int,
     var arg19: Int
 ) {
-    constructor(arg: Int) : this(
-        arg, arg, arg, arg, arg, arg, arg, arg, arg, arg,
-        arg, arg, arg, arg, arg, arg, arg, arg, arg, arg
-    )
+    companion object {
+        fun of(arg: Int) = TwentyArgs(
+            arg, arg, arg, arg, arg, arg, arg, arg, arg, arg,
+            arg, arg, arg, arg, arg, arg, arg, arg, arg, arg
+        )
+    }
 }

@@ -90,9 +90,3 @@ class TwentyArgsBenchmark {
         """.trimIndent()
     }
 }
-
-// fun main() {
-//     TwentyArgsBenchmark().apply {
-//
-//     }
-// }

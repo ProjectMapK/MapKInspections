@@ -30,9 +30,9 @@ dependencies {
     // targets of benchmark
     implementation("com.github.ProjectMapK:FastKFunction:0.1.3")
     implementation("com.github.ProjectMapK:KMapper:0.33")
-    implementation("com.github.ProjectMapK:KRowMapper:0.17")
 
     // for RowMapper benchmark
+    implementation("com.github.ProjectMapK:KRowMapper:0.17")
     implementation(group = "org.springframework", name = "spring-jdbc", version = "5.3.2")
     implementation(group = "com.h2database", name = "h2", version = "1.4.200")
 

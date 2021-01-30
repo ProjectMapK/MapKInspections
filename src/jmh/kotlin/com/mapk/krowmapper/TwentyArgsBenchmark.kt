@@ -53,6 +53,30 @@ class TwentyArgsBenchmark {
     @Benchmark
     fun kRowMapper(): TwentyArgs? = _kRowMapper.mapRow(resultSet, 0)
 
+    @Benchmark
+    fun manual(): TwentyArgs? = TwentyArgs(
+        resultSet.getInt("arg00"),
+        resultSet.getInt("arg01"),
+        resultSet.getInt("arg02"),
+        resultSet.getInt("arg03"),
+        resultSet.getInt("arg04"),
+        resultSet.getInt("arg05"),
+        resultSet.getInt("arg06"),
+        resultSet.getInt("arg07"),
+        resultSet.getInt("arg08"),
+        resultSet.getInt("arg09"),
+        resultSet.getInt("arg10"),
+        resultSet.getInt("arg11"),
+        resultSet.getInt("arg12"),
+        resultSet.getInt("arg13"),
+        resultSet.getInt("arg14"),
+        resultSet.getInt("arg15"),
+        resultSet.getInt("arg16"),
+        resultSet.getInt("arg17"),
+        resultSet.getInt("arg18"),
+        resultSet.getInt("arg19"),
+    )
+
     @TearDown
     fun tearDown() {
         dataSource.connection.close()

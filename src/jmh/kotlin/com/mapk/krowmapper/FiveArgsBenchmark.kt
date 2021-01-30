@@ -53,6 +53,15 @@ class FiveArgsBenchmark {
     @Benchmark
     fun kRowMapper(): FiveArgs? = _kRowMapper.mapRow(resultSet, 0)
 
+    @Benchmark
+    fun manual(): FiveArgs? = FiveArgs(
+        resultSet.getInt("arg0"),
+        resultSet.getInt("arg1"),
+        resultSet.getInt("arg2"),
+        resultSet.getInt("arg3"),
+        resultSet.getInt("arg4")
+    )
+
     @TearDown
     fun tearDown() {
         dataSource.connection.close()

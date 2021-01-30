@@ -2,6 +2,7 @@ package com.mapk.kmapper
 
 import com.mapk.common.sources.FiveArgsSrc
 import com.mapk.common.targets.FiveArgs
+import org.mapstruct.factory.Mappers
 import org.openjdk.jmh.annotations.Benchmark
 import org.openjdk.jmh.annotations.Level
 import org.openjdk.jmh.annotations.Scope
@@ -13,6 +14,8 @@ import java.util.concurrent.ThreadLocalRandom
 class FiveArgsBenchmark {
     private val _kMapper = KMapper(::FiveArgs)
     private val _boundKMapper = BoundKMapper<FiveArgsSrc, FiveArgs>()
+
+    private val _mapStruct: MapStructMapper = Mappers.getMapper(MapStructMapper::class.java)
 
     private lateinit var src: FiveArgsSrc
 
@@ -27,6 +30,9 @@ class FiveArgsBenchmark {
 
     @Benchmark
     fun boundKMapper(): FiveArgs = _boundKMapper.map(src)
+
+    @Benchmark
+    fun mapStruct(): FiveArgs = _mapStruct.map(src)
 
     @Benchmark
     fun manual(): FiveArgs = FiveArgs(

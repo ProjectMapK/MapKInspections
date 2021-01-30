@@ -26,6 +26,8 @@ dependencies {
     // commons
     implementation(kotlin("stdlib"))
     compileOnly(group = "org.jetbrains", name = "annotations", version = "20.1.0")
+    // for warning suppression
+    jmhImplementation("org.slf4j:slf4j-simple:1.7.25")
 
     // targets of benchmark
     implementation("com.github.ProjectMapK:FastKFunction:0.1.3")

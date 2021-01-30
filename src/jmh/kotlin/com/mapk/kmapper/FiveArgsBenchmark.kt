@@ -5,6 +5,7 @@ import com.mapk.common.targets.FiveArgs
 import com.mapk.common.targets.FiveArgs2
 import ma.glasnost.orika.impl.DefaultMapperFactory
 import org.mapstruct.factory.Mappers
+import org.modelmapper.ModelMapper
 import org.openjdk.jmh.annotations.Benchmark
 import org.openjdk.jmh.annotations.Level
 import org.openjdk.jmh.annotations.Scope
@@ -23,6 +24,8 @@ class FiveArgsBenchmark {
 
     private val _orika = DefaultMapperFactory.Builder().build()
         .getMapperFacade(FiveArgsSrc::class.java, FiveArgs::class.java)
+
+    private val _modelMapper = ModelMapper()
 
     private lateinit var src: FiveArgsSrc
 
@@ -46,6 +49,9 @@ class FiveArgsBenchmark {
 
     @Benchmark
     fun orika(): FiveArgs = _orika.map(src)
+
+    @Benchmark
+    fun modelMapper(): FiveArgs = _modelMapper.map(src, FiveArgs::class.java)
 
     @Benchmark
     fun manual(): FiveArgs = FiveArgs(

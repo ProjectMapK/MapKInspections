@@ -27,7 +27,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     compileOnly(group = "org.jetbrains", name = "annotations", version = "20.1.0")
     // for warning suppression
-    jmhImplementation("org.slf4j:slf4j-simple:1.7.25")
+    implementation("org.slf4j:slf4j-simple:1.7.25")
 
     // targets of benchmark
     implementation("com.github.ProjectMapK:FastKFunction:0.1.3")
@@ -38,7 +38,7 @@ dependencies {
     implementation("org.mapstruct:mapstruct:1.4.1.Final")
     jmhAnnotationProcessor("org.mapstruct:mapstruct-processor:1.4.1.Final")
     // orika
-    jmhImplementation("ma.glasnost.orika:orika-core:1.5.4")
+    implementation("ma.glasnost.orika:orika-core:1.5.4")
     // modelmapper
     jmhImplementation("org.modelmapper:modelmapper:2.3.9")
 

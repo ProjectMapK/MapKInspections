@@ -40,7 +40,7 @@ dependencies {
     // orika
     implementation("ma.glasnost.orika:orika-core:1.5.4")
     // modelmapper
-    jmhImplementation("org.modelmapper:modelmapper:2.3.9")
+    implementation("org.modelmapper:modelmapper:2.3.9")
 
     // for RowMapper benchmark
     implementation("com.github.ProjectMapK:KRowMapper:0.17")

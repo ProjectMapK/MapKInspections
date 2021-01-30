@@ -29,7 +29,16 @@ dependencies {
 
     // targets of benchmark
     implementation("com.github.ProjectMapK:FastKFunction:0.1.3")
+
+    // for Mapper benchmark
     implementation("com.github.ProjectMapK:KMapper:0.33")
+    // mapstruct
+    implementation("org.mapstruct:mapstruct:1.4.1.Final")
+    annotationProcessor("org.mapstruct:mapstruct-processor:1.4.1.Final")
+    // orika
+    implementation("ma.glasnost.orika:orika-core:1.5.4")
+    // modelmapper
+    implementation("org.modelmapper:modelmapper:2.3.9")
 
     // for RowMapper benchmark
     implementation("com.github.ProjectMapK:KRowMapper:0.17")

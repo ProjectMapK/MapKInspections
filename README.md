@@ -46,3 +46,18 @@ it was faster than `KMapper` and `BoundKMapper`, it is used for comparison.
 
 ##### ModelMapper
 This is the library that led to the creation of `KMapper`, it is used for comparison.
+
+### KRowMapper
+- [KRowMapper 0.17](https://github.com/ProjectMapK/KRowMapper)
+
+A comparison of `KRowMapper`, `BeanPropertyRowMapper`, and manual mapping.
+
+#### Results
+```
+c.m.krowmapper.FiveArgsBenchmark.beanPropertyRowMapper    thrpt    4    112537.259 ±     5462.588  ops/s
+c.m.krowmapper.FiveArgsBenchmark.kRowMapper               thrpt    4   1222436.555 ±   157389.056  ops/s
+c.m.krowmapper.FiveArgsBenchmark.manual                   thrpt    4   3273297.552 ±   638106.756  ops/s
+c.m.krowmapper.TwentyArgsBenchmark.beanPropertyRowMapper  thrpt    4     15399.234 ±     1162.254  ops/s
+c.m.krowmapper.TwentyArgsBenchmark.kRowMapper             thrpt    4    335197.138 ±    19255.629  ops/s
+c.m.krowmapper.TwentyArgsBenchmark.manual                 thrpt    4    760402.555 ±    15925.221  ops/s
+```
